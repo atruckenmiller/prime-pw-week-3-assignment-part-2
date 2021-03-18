@@ -25,8 +25,11 @@ for (let i=3; i<6; i++) {
 }
 // 1.c. TODO: Write a for loop to console.log EVEN numbers from 2 to 10
 //   - Which part of the example loop do you need to change to do this?
+
+// Explanation of code: used a % variable to show that I wanted the code to count by two
+// and I decided to use a modulous operator to count down by two, since each number listed in the array is divisible by two. 
 console.log('count even numbers from 2 to 10 (2, 4, 6, 8, 10):');
-for ( let i = 2; i <= 10; i++){
+for ( let i = 2; i <= 10; i+=2){
   if(i % 2 == 0){
     console.log('even numbers:',i + 0);
   }
@@ -35,9 +38,7 @@ for ( let i = 2; i <= 10; i++){
 // 1.d. (STRETCH) TODO: Write a for loop to do a counddown from 5 to 0
 console.log('STRETCH: countdown from 5 to 0');
 for ( let i = 5; i >= 0; i--){
-  if(i % 1 == 0){
     console.log('count backwards:', i - 0);
-  }
 }
 
 // 2. For of loops
@@ -46,9 +47,10 @@ let stars = ['Polaris', 'Gacrux', 'Formalhaut', 'Rigel', 'Deneb']
 
 // 2.a. TODO: Write a for of loop to console.log each star in the 'stars' array
 console.log('Some stars:');
+let eachStar = 0;
 
-for(star of stars){
-  console.log('Some stars:', stars);
+for (let eachStar of stars){
+  console.log('List of stars:', eachStar);
 }
 
 // 3. While loops
@@ -56,12 +58,13 @@ console.log('---- 3. While loop ----');
 
 // 3.a. TODO: Write a while loop to console.log each star in the 'stars' array
 console.log('Some stars using while:');
+// Explanation of code: To explain how I listed out the list of stars in a while loop,I created a variable called s,
+// and then I added stars.length to list out the number of stars. and I used stars[s] to list out a single star, to get the list in an array of each star.
+let s = 0;
 
-let index = 0;
-
-while(index < stars.length){
-  console.log('List of stars:', stars);
-  index++;
+while(s < stars.length){
+  s++;
+  console.log('List of Stars in while loop:', stars[s]);
 }
 
 
